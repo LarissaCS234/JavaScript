@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>  
+  <SCRIPT>
+        function calc_media(n1,n2) {
+            var m = (n1+n2)/2;
+            return m ;
+        }
+    
+        function resultado (form) {
+            var media = calc_media(parseFloat(form.notal.value),parseFloat(form.nota2.value));
+            if (media>=7)
+             alert("Aprovado");
+            else
+             alert("Recuperação");
+        }
+    
+    </SCRIPT>
+    
+</HEAD>
+    
+<BODY>
+    <H1>Sistema Academico</H1>
+    <FORM NAME="myform" ACTION="" METHOD="GET">
+        Matricula:<INPUT TYPE="text" NAME="matricula"><BR>
+        Nome: <INPUT TYPE="text" NAME="nome_aluno"><BR>
+        Data nascimento: <input type="text" name="nasc_aluno"><BR>
+        Sexo:<BR>
+        <INPUT TYPE="radio" NAME="sexo" VALUE="masculino"> Masculino<BR>
+        <INPUT TYPE="radio" NAME="sexo" VALUE="feminino"> Feminino<BR>
+        Primeira Nota: <INPUT TYPE="text" NAME="nota1"><BR>
+        Segunda Nota:<INPUT TYPE="text" NAME="nota2"><BR>
+        <INPUT TYPE="button" NAME="button" Value="Calcular Média" onClick="resutado(this.form)">
+    </FORM>
+</BODY>
+    
+</HTML>
